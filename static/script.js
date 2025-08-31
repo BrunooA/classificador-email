@@ -1,8 +1,7 @@
-// script.js
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
-  const emailText = document.getElementById("email_text");
+  const emailText = document.getElementById("mensagem");
   const copyBtn = document.getElementById("copyBtn");
   const copyFeedback = document.getElementById("copyFeedback");
   const suggestedResponse = document.getElementById("suggestedResponse");
@@ -55,7 +54,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Pequeno som de notificação
-  const audio = new Audio("/static/notify.mp3"); // adicione um arquivo notify.mp3 na pasta static
-  if (resultCard) audio.play().catch(() => {});
+
 });

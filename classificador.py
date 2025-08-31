@@ -6,14 +6,14 @@ from dotenv import load_dotenv
 load_dotenv(override=True)  
 openai.api_key = os.getenv("OPENAI_API_KEY")
 if not openai.api_key:
-    print("⚠️ Chave da OpenAI não encontrada. Coloque no .env")
+    print("Chave da OpenAI não encontrada. Coloque no .env")
     exit()
 
 print(">>> CHAVE CARREGADA:", openai.api_key[:10])
 
 
 
-def classify_and_respond(email_text):
+def classify_and_respond(mensagem):
 
     prompt = f"""
 Você é um classificador de emails.  
@@ -29,10 +29,11 @@ Regras:
 - "Improdutivo": não requer ação (ex.: agradecimento, parabéns, mensagens sociais).
 
 Email:
-\"\"\"{email_text}\"\"\"
+\"\"\"{mensagem}\"\"\"
 """
 
     try:
+        # Configuração do Agente da IA 
         response = openai.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": prompt}],
@@ -51,7 +52,7 @@ Email:
         if categoria not in ["Produtivo", "Improdutivo"]:
             categoria = "Indefinido"
 
-        return dict(categoria=categoria, resposta=resposta, msg=email_text)
+        return dict(categoria=categoria, resposta=resposta, msg=mensagem)
 
     except Exception as e:
         print("Erro IA:", e)
