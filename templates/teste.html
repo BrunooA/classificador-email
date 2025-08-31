@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste de Classificação</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados do Teste</h1>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <tr>
+                <th>Email</th>
+                <th>Categoria</th>
+                <th>Resposta sugerida</th>
+            </tr>
+            {% for r in resultados %}
+            <tr>
+                <td>{{ r.email }}</td>
+                <td>{{ r.categoria }}</td>
+                <td>{{ r.resposta }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <a href="/">⬅ Voltar</a>
+    </div>
+</body>
+</html>
