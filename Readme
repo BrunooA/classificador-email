@@ -1,6 +1,6 @@
 # 📧 Classificador de E-mails
 
-Um projeto simples, direto e funcional para **classificar e-mails automaticamente**, utilizando Python e Flask. A ideia é permitir que o usuário cole o conteúdo de um e-mail e receba uma classificação automática baseada em regras ou palavras-chave.
+Um projeto simples, direto e funcional para classificar e-mails automaticamente, utilizando Python e Flask. A ideia é permitir que o usuário cole o conteúdo de um e-mail e receba uma classificação automática baseada em regras ou palavras-chave.
 
 ---
 
@@ -18,8 +18,8 @@ Facilitar a organização de mensagens, permitindo:
 
 ## 🛠 Tecnologias
 
-* **Python 3**
-* **Flask** (backend e interface web)
+* Python 3
+* Flask (backend e interface web)
 * HTML/CSS na camada de interface
 
 ---
@@ -30,8 +30,9 @@ A lógica pode variar, mas normalmente envolve:
 
 * Verificar palavras-chave dentro do texto
 * Regras básicas em Python
-* Retornar uma categoria como **Financeiro**, **Suporte**, **Cobrança**, **Pessoal** etc.
+* Retornar uma categoria como Financeiro, Suporte, Cobrança, Pessoal etc.
 
 ## 👨‍💻 Autor
 
-**Bruno Araujo**
+Bruno Araujo
+
